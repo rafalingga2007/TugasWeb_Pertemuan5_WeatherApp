@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f1f5f9;
+  background:
+    radial-gradient(circle at top left, #254c70 0, transparent 38%),
+    linear-gradient(145deg, #0b1220, #17263d 55%, #101827);
+}
+
+.weather-app {
+  width: 100%;
+  max-width: 470px;
+  padding: 30px;
+  border: 1px solid #35465f;
+  border-radius: 24px;
+  background: rgba(18, 31, 50, 0.94);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+}
+
+.app-header {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #facc15;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  letter-spacing: -0.06em;
+}
+
+h1 span {
+  color: #facc15;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: #a9b8cc;
+  line-height: 1.5;
+}
+
+.search-form {
+  display: flex;
+  gap: 9px;
+}
+
+.search-form input {
+  min-width: 0;
+  flex: 1;
+  padding: 14px 13px;
+  border: 1px solid #465873;
+  border-radius: 11px;
+  outline: none;
+  color: #f8fafc;
+  background: #0c1728;
+  font-size: 1rem;
+}
+
+.search-form input:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.12);
+}
+
+.search-form button {
+  padding: 0 19px;
+  border: 0;
+  border-radius: 11px;
+  color: #172033;
+  background: #facc15;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: #fde047;
+}
+
+.status, .error {
+  margin: 16px 0 0;
+  line-height: 1.5;
+}
+
+.status {
+  color: #facc15;
+}
+
+.error {
+  color: #fda4af;
+}
+
+.weather-result {
+  margin-top: 24px;
+  padding: 22px 18px;
+  text-align: center;
+  border: 1px solid #35465f;
+  border-radius: 18px;
+  background: linear-gradient(150deg, #1b304b, #132137);
+}
+
+.date-label {
+  margin: 0;
+  color: #9fb0c7;
+  font-size: 0.82rem;
+}
+
+.weather-result h2 {
+  margin: 10px 0 0;
+  font-size: 1.35rem;
+}
+
+#weatherIcon {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.temperature {
+  margin: -4px 0 0;
+  font-size: 3.3rem;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+
+.description {
+  margin: 6px 0 20px;
+  color: #c1cee0;
+  text-transform: capitalize;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.detail-card {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  padding: 13px 8px;
+  border-radius: 12px;
+  background: rgba(8, 17, 31, 0.55);
+}
+
+.detail-icon {
+  font-size: 1.2rem;
+}
+
+.detail-label {
+  color: #9fb0c7;
+  font-size: 0.78rem;
+}
+
+.detail-card strong {
+  font-size: 0.98rem;
+}
+
+.history-section {
+  margin-top: 26px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-heading h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.text-button {
+  border: 0;
+  padding: 6px;
+  color: #facc15;
+  background: transparent;
+  cursor: pointer;
+}
+
+.history-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 13px 0 0;
+  list-style: none;
+}
+
+.history-list button {
+  padding: 8px 12px;
+  border: 1px solid #435570;
+  border-radius: 999px;
+  color: #dbeafe;
+  background: #1b2b42;
+  cursor: pointer;
+}
+
+.history-list button:hover {
+  border-color: #facc15;
+}
+
+.empty-history {
+  margin: 12px 0 0;
+  color: #8fa1b9;
+  font-size: 0.85rem;
+}
+
+footer {
+  margin-top: 28px;
+  color: #71839c;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 420px) {
+  .weather-app {
+    padding: 22px 17px;
+    border-radius: 18px;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-form button {
+    min-height: 45px;
+  }
+
+  .temperature {
+    font-size: 2.8rem;
+  }
+}
